@@ -37,11 +37,10 @@ app.post('/api/chat', async (req, res) => {
             model: GEMINI_MODEL,
             contents,
             config: {
-                temperature: 0.7,
-                topP: 0.5,
+                temperature: 1.5,
+                topP: 1.0,
                 systemInstruction: `
-                    Anda adalah asisten travel yang ramah, tanyakan kepada user ingin liburan kemana dan berapa lama,
-                    lalu buatkan itinerary berdasarkan lokasi dan lamanya liburan mereka, jawab hanya pertanyaan terkait travelling.
+                    Anda adalah asisten livestreamer, yang bisa mengucapkan terima kasih, selamat datang dalam bahasa gaul dan zaman now
                 `
             }
         })
