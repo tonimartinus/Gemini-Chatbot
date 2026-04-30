@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Space+Mono&display=swap');
+
+:root {
+  --sw-orange: #faaf40;
+  --sw-teal: #86ced2;
+  --sw-pink: #f6b5b5;
+  --sw-bg: #fdfdfd;
+  --sw-card: #e9eeef;
+  --sw-black: #000000;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: var(--sw-bg);
+  color: var(--sw-black);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: var(--sw-card);
+  border: 3px solid var(--sw-black);
+  box-shadow: 8px 8px 0px var(--sw-black);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+h1 {
+  font-family: 'Lexend', sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-top: 0;
+  text-align: center;
+  background: var(--sw-orange);
+  padding: 10px;
+  border: 2px solid var(--sw-black);
+  box-shadow: 4px 4px 0px var(--sw-black);
+  border-radius: 8px;
+}
+
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  padding: 16px;
+  border: 2px solid var(--sw-black);
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Scrollbar Style */
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: var(--sw-black);
+  border-radius: 4px;
+}
+
+.message {
+  padding: 10px 16px;
+  border: 2px solid var(--sw-black);
+  border-radius: 8px;
+  max-width: 80%;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: var(--sw-teal);
+  box-shadow: 4px 4px 0px var(--sw-black);
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: var(--sw-pink);
+  box-shadow: 4px 4px 0px var(--sw-black);
+}
+
+.message.error {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+form {
+  display: flex;
+  gap: 12px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--sw-black);
+  border-radius: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  outline: none;
+  box-shadow: 4px 4px 0px var(--sw-black);
+  transition: transform 0.1s;
+}
+
+input[type="text"]:focus {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--sw-black);
+}
+
+button {
+  padding: 12px 20px;
+  background-color: var(--sw-orange);
+  color: var(--sw-black);
+  border: 2px solid var(--sw-black);
+  border-radius: 8px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--sw-black);
+  transition: all 0.1s;
+}
+
+button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--sw-black);
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px var(--sw-black);
+}
